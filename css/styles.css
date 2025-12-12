@@ -386,27 +386,33 @@ canvas {
 
 /* ==================== CROP MODAL ==================== */
 
-.crop-modal {
-    max-width: 95vw;
-    max-height: 95vh;
-    width: 900px;
+.crop-modal .modal-content {
+    background: #FFFFFF;
+    border-radius: 8px;
+    width: 95%;
+    max-width: 900px;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
 
 .crop-container {
-    position: relative;  /* ← WICHTIG! */
+    position: relative;
     background: #1a1a1a;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 500px;
+    min-height: 300px;
+    max-height: 60vh;
     overflow: hidden;
     touch-action: none;
+    flex: 1;
 }
-
 
 #cropCanvas {
     max-width: 100%;
-    max-height: 60vh;
+    max-height: 100%;
     display: block;
 }
 
@@ -450,6 +456,15 @@ canvas {
     bottom: -10px;
     right: -10px;
     cursor: se-resize;
+}
+
+.modal-footer {
+    flex-shrink: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    border-top: 1px solid #E0E0E0;
 }
 
 .crop-controls {
