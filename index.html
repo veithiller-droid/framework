@@ -1,9 +1,9 @@
-<!-- index.html - UPDATE -->
+<!-- index.html - KOMPLETT NEU -->
 <!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Frame Configurator</title>
 <link rel="stylesheet" href="css/styles.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -77,6 +77,36 @@
                 </svg>
                 Capture
             </button>
+        </div>
+    </div>
+</div>
+
+<!-- Crop Modal -->
+<div id="cropModal" class="modal">
+    <div class="modal-content crop-modal">
+        <div class="modal-header">
+            <h3>Crop Image</h3>
+            <button id="closeCrop" class="close-btn">&times;</button>
+        </div>
+        <div class="crop-container">
+            <canvas id="cropCanvas"></canvas>
+            <div id="cropBox" class="crop-box">
+                <div class="crop-handle nw"></div>
+                <div class="crop-handle ne"></div>
+                <div class="crop-handle sw"></div>
+                <div class="crop-handle se"></div>
+            </div>
+        </div>
+        <div class="crop-controls">
+            <div class="zoom-controls">
+                <button id="zoomOut" class="zoom-btn">-</button>
+                <input id="zoomSlider" type="range" min="100" max="300" value="100">
+                <button id="zoomIn" class="zoom-btn">+</button>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button id="cancelCrop" class="secondary-btn">Cancel</button>
+            <button id="applyCrop" class="capture-btn">Apply Crop</button>
         </div>
     </div>
 </div>
