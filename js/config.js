@@ -40,10 +40,22 @@ const PP_COLORS = [
 ];
 
 // Scaling factors for different photo formats and frame widths
+// Scaling factors for different photo formats and frame widths
 const SCALE_FACTORS = {
+    '0.563': {  // 9:16 (Kamera-Querformat → rotiert zu Hochformat)
+        36: 0.98,
+        50: 0.97,
+        54: 0.97,
+        60: 0.96,
+        70: 0.96,
+        75: 0.95,
+        100: 0.94,
+        110: 0.93,
+        120: 0.92,
+        150: 0.90
+    },
     '0.667': { 36: 0.976, 100: 0.933, 150: 0.900 },
     '0.750': { 36: 0.933, 100: 0.805, 150: 0.705 },
-    '0.563': { 36: 0.933, 100: 0.807, 150: 0.710 },
     '1.000': { 36: 0.933, 100: 0.805, 150: 0.705 }
 };
 
